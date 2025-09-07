@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.2.0">
+  <diagram name="RoadMap MVP" id="roadmap">
+    <mxGraphModel dx="1025" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="header" value="RoadMap: Передача ставок в кол-центр (MVP)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="20" width="400" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="timeline_q2" value="Q2 2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="143" y="70" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="timeline_q3" value="Q3 2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="363" y="70" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="timeline_q4" value="Q4 2025" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="583" y="70" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="timeline_q1_25" value="Q1 2026" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="770" y="70" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="abs_label" value="АБС" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="130" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="abs_task1" value="Модуль ставок + Events" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="143" y="120" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="abs_task2" value="Генератор файлов CSV" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="323" y="120" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="abs_task3" value="SFTP интеграция" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="483" y="120" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="int_label" value="Интеграционный слой" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="190" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="int_task1" value="Rates API Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="143" y="180" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="int_task2" value="Event Subscriber + Cache" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="303" y="180" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="int_task3" value="Мониторинг" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="483" y="180" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cc_label" value="Кол-центр" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="250" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cc_task1" value="API интеграция" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="363" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cc_task2" value="UI модификации" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="503" y="240" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="infra_label" value="Инфраструктура" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="310" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="infra_task1" value="SFTP-сервер в DMZ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="143" y="300" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="infra_task2" value="Сетевая безопасность" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="303" y="300" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="infra_task3" value="Мониторинг инфры" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="463" y="300" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="partner_label" value="Партнёрский КЦ" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="370" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="partner_task1" value="Import Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="583" y="360" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="partner_task2" value="UI интеграция" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="723" y="360" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qa_label" value="QA" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="430" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qa_task1" value="Интеграционное тестирование" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="583" y="420" width="180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qa_task2" value="E2E тестирование" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="783" y="420" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="milestone1" value="MVP Готов" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="480" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="milestone2" value="Полная интеграция" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="800" y="480" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_title" value="Легенда:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="560" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_q2" value="Q2: Основа" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="20" y="590" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_q3" value="Q3: Интеграция" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="120" y="590" width="100" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_q4" value="Q4: Тестирование" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="240" y="590" width="110" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="legend_q1" value="Q1 2025: Доработки" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="370" y="590" width="120" height="25" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

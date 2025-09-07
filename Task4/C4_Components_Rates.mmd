@@ -1,0 +1,53 @@
+graph TD
+  %% C4 Components - Детализация передачи ставок
+  subgraph ABS[АБС - Delphi-Oracle]
+    RATE_MODULE[Модуль ставок]
+    RATE_DB[(База ставок)]
+    FILE_GEN[Генератор файлов]
+    EVENT_PUB[Event Publisher]
+  end
+
+  subgraph INT[Интеграционный слой - Java-Spring-Boot]
+    RATE_API[Rates API Service]
+    RATE_CACHE[Cache - Redis]
+    EVENT_SUB[Event Subscriber]
+    MONITOR[Monitoring Service]
+  end
+
+  subgraph CC_SYS[Система внутреннего КЦ]
+    CC_UI[UI КЦ]
+    CC_CACHE[Локальный кэш ставок]
+  end
+
+  subgraph SFTP_ZONE[DMZ - SFTP]
+    SFTP_SERVER[SFTP Server]
+    FILE_STORE[(Файловое хранилище)]
+  end
+
+  subgraph PARTNER[Партнёрский КЦ - внешний]
+    PARTNER_IMPORT[Import Service]
+    PARTNER_DB[(База ставок партнёра)]
+    PARTNER_UI[UI партнёрского КЦ]
+  end
+
+  %% Потоки данных
+  RATE_MODULE --> RATE_DB
+  RATE_MODULE --> EVENT_PUB
+  RATE_MODULE --> FILE_GEN
+  
+  EVENT_PUB -->|События изменений| EVENT_SUB
+  EVENT_SUB --> RATE_API
+  RATE_API --> RATE_CACHE
+  
+  CC_UI -->|Запрос ставок| RATE_API
+  RATE_API -->|Ставки + TTL 5мин| CC_CACHE
+  CC_CACHE --> CC_UI
+  
+  FILE_GEN -->|CSV файлы| SFTP_SERVER
+  SFTP_SERVER --> FILE_STORE
+  FILE_STORE -->|Загрузка по расписанию| PARTNER_IMPORT
+  PARTNER_IMPORT --> PARTNER_DB
+  PARTNER_DB --> PARTNER_UI
+  
+  MONITOR -->|Отслеживание| EVENT_SUB
+  MONITOR -->|Проверка SFTP| SFTP_SERVER
