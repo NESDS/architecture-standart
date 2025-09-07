@@ -1,0 +1,19 @@
+graph TD
+  %% C4 Context - Передача ставок в КЦ
+  Client[Клиент]
+  CC_Internal[Внутренний КЦ]
+  CC_Partner[Партнёрский КЦ]
+  ABS[АБС]
+  INT[Интеграционный слой]
+  SFTP[SFTP-сервер]
+  BackOffice[Бэк-офис депозитов]
+
+  Client -->|Звонок, вопросы по ставкам| CC_Internal
+  Client -->|Звонок, консультация| CC_Partner
+  CC_Internal -->|API запрос ставок| INT
+  INT -->|Получение ставок| ABS
+  ABS -->|Публикация изменений ставок| INT
+  ABS -->|Формирование файлов| SFTP
+  SFTP -->|Загрузка файлов ставок| CC_Partner
+  BackOffice -->|Управление ставками| ABS
+  CC_Partner -->|Перевод на оформление| CC_Internal

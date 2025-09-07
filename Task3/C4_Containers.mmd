@@ -1,0 +1,37 @@
+graph TD
+  %% C4 Containers (фокус на ИБ и АБС)
+  subgraph Website[Сайт PHP-React]
+    WUI[UI]
+  end
+
+  subgraph IB[Интернет-банк ASP.NET-MVC-MS-SQL]
+    IUI[UI]
+    IAPI[WebApp-API]
+    IDB[(MS SQL)]
+  end
+
+  subgraph INT[Интеграционный слой Java-Spring-Boot]
+    GW[API Gateway-Service]
+    Q[Ретраи-Outbox]
+  end
+
+  subgraph ABS[АБС Delphi-Oracle-PL-SQL]
+    ABS_API[Бизнес-процедуры]
+    ORA[(Oracle DB)]
+    RATE[Модуль ставок]
+  end
+
+  SMS[СМС-шлюз]
+  CC[Система кол-центра]
+
+  WUI -->|Заявка| CC
+  IUI --> IAPI
+  IAPI -->|Заявка, чтение ставок| GW
+  IAPI --> IDB
+  GW -->|Команды-запросы| ABS_API
+  GW --> Q
+  ABS_API --> RATE
+  ABS_API --> ORA
+  ABS_API -->|Уведомления| SMS
+  CC -->|Согласование, статусы| ABS_API
+
